@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>Email</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage" transform="translate(-511.000000, -19.000000)">
+            <g id="Email" transform="translate(511.000000, 19.000000)">
+                <rect id="Rectangle-Copy-14" fill="#475FD1" x="0" y="0" width="36" height="36" rx="18"></rect>
+                <g id="Group-5" transform="translate(9.000000, 11.000000)">
+                    <path d="M18,4.04077974 L18,12.25 C18,13.2164983 17.1941125,14 16.2,14 L1.8,14 C0.80588745,14 0,13.2164983 0,12.25 L0,4.04077974 L8.59750776,8.22012379 C8.85088251,8.34329207 9.14911749,8.34329207 9.40249224,8.22012379 L18,4.04077974 Z" id="primary" fill="#D6DBF5" fill-rule="nonzero"></path>
+                    <path d="M9,6.45922026 L0,2.08422026 L0,1.75 C0,0.783501688 0.80588745,4.4408921e-16 1.8,4.4408921e-16 L16.2,4.4408921e-16 C17.1941125,4.4408921e-16 18,0.783501688 18,1.75 L18,2.08422026 L9,6.45922026 Z" id="secondary" fill="#8594E0"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

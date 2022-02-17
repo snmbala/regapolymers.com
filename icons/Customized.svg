@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Customized</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage" transform="translate(-960.000000, -1740.000000)">
+            <g id="Customized" transform="translate(960.000000, 1740.000000)">
+                <circle id="Oval-Copy-2" fill="#E9ECFC" cx="30" cy="30" r="30"></circle>
+                <g id="Group" transform="translate(19.000000, 18.000000)">
+                    <polygon id="Path" fill="#A3B1F5" points="14.4 1.6 14.4 3.204 18.009 3.204 21.6 4.8 13.2 12 10.8 24 0 19.2 0 4.8 10.8 0"></polygon>
+                    <path d="M21.6,4.8 L21.6,19.2 L10.8,24 L10.8,9.6 L21.6,4.8 Z M14.4,1.5996 L18,3.204 L7.2,8 L7.2,11.6 L3.6,10 L3.6,6.4 L14.4,1.5996 Z" id="secondary" fill="#334DCC"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

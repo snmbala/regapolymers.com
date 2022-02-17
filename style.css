@@ -1,0 +1,184 @@
+body {
+      position: relative; 
+  }
+
+  html{
+  scroll-behavior:smooth;
+}
+
+
+#Home, #Products, #AboutUs, #Testimonial, #ContactUs{
+    padding-top: 48px;
+    margin-top: -48px;
+}
+
+
+h1{
+	font-family: Lato;
+	font-weight:400;
+	font-size: 48px;
+	color: #FFFFFF;
+	line-height: 56px;
+}
+
+h2 {
+	font-family: Lato;
+	font-weight: 400;
+	font-size: 36px;
+	color: #292C3D;
+	font-weight: 400px;
+}
+
+h4 {
+	font-family: Lato;
+	font-weight:700;
+	font-size: 16px;
+	color: #2D3353;
+}
+
+p {
+	font-family: Lato;
+	font-weight: 400;
+	font-size: 16px;
+	color: #2D3353;
+	line-height: 24px;}
+
+.features p{
+	font-family: Lato;
+	font-weight: 300;
+	font-size: 14px;
+	color: #808080;
+	line-height: 21px
+}
+
+.footer input[type=text], .footer input[type=email], textarea.message{
+    background-color: #242B42;
+    color: #C9D3F5 !important;
+    border: #394060 1px solid !important;
+    outline: none;
+}
+
+.footer input[type=text]:focus, .footer input[type=email]:focus, textarea:focus.message{
+	background-color: #242B42;
+    color: #C9D3F5 !important;
+    border: #516EFB 2px solid !important;
+    resize: none;
+    outline: none;
+}
+
+.footer label {
+  	cursor: default;
+  	font-family: Lato-regular;
+	font-size: 16px;
+	color: #8491AD;
+}
+
+.btn-enquiry {
+	background-color: #B9A646;
+	font-family: Lato-bold;
+	font-style: 10px;
+	padding: 10px 24px;
+	border: 0px;
+	color: #1E233E;
+	text-transform: uppercase;
+}
+
+.Leading {
+	background-color: #334DCC;
+	min-height: 680px;
+}
+
+.Leading p {
+	font-family: Lato;
+	font-weight: 400;
+	font-size: 14px;
+	color: #A8F0F0;
+	line-height: 21px;
+	max-width: 460px
+}
+
+.btn-primary{
+	font-family: Lato;
+	font-weight: 700;
+	font-size: 14px;
+	color: #332C0B;
+	letter-spacing: 1.2px;
+	line-height: 24px;
+	text-transform: uppercase;
+	background: #D9BB26;
+	border-radius: 4px;
+	padding: 10px 30px;
+	border: none;
+}
+
+.btn-primary:hover {
+	background: #FF446F;
+}
+
+.btn-secondary{
+	font-family: Lato;
+	font-weight:700;
+	font-size: 14px;
+	color: #332C0B;
+	letter-spacing: 1.2px;
+	line-height: 24px;
+	text-transform: uppercase;
+	background: #D8D8D8;
+	border-radius: 4px;
+	padding: 10px 30px;
+	border: none;
+}
+
+.footer{ 
+	background-color: #394060;
+}
+
+.copyright {
+	height: 36px;
+	background: #303550;
+    color: #858bad;
+    font-size: 14px;
+	font-weight: 400;
+	line-height: 19px;
+    padding-top: 10px;
+	padding-left: 100px;
+}
+
+.aboutUs { 
+	background-image: url('images/BG-Strip.png');
+  	background-repeat: repeat-x;
+}
+
+.dark-blue {
+background-color: #334DCC;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+}
+
+.navbar-custom .nav-item:hover .nav-link {
+}
+
+.navbar-custom .nav-item:active .nav-link { 
+}
+
+.product-label{
+	color: #8491AD;
+}
+
+.testimonial{
+	background-color: #F2F4FC;
+}
+
+.testimonial-card{
+	background-color:#ffffff;
+	padding: 30px 60px;
+}
+
+.grey-txt{
+	color:#7E808F;
+}
+
+.deep-shadow:hover {
+box-shadow: 0 0 20px 0 rgba(0,0,0,0.10);
+}
