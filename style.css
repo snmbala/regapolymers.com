@@ -1,184 +1,535 @@
+/* Reset and Base Styles */
 body {
-      position: relative; 
-  }
-
-  html{
-  scroll-behavior:smooth;
+    position: relative;
+    font-family: Lato, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #2D3353;
+    margin: 0;
+    padding: 0;
 }
 
-
-#Home, #Products, #AboutUs, #Testimonial, #ContactUs{
-    padding-top: 48px;
-    margin-top: -48px;
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Optimized offset for fixed navbar */
 }
 
+/* Clean scroll offset method - no visual spacing impact */
+#Home, #Products, #AboutUs, #Testimonial, #ContactUs {
+    scroll-margin-top: 80px; /* Modern approach for scroll offset */
+}
 
-h1{
-	font-family: Lato;
-	font-weight:400;
-	font-size: 48px;
-	color: #FFFFFF;
-	line-height: 56px;
+/* Typography Hierarchy - Accessible and Consistent */
+h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    margin: 0 0 1rem 0;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 1.2;
 }
 
 h2 {
-	font-family: Lato;
-	font-weight: 400;
-	font-size: 36px;
-	color: #292C3D;
-	font-weight: 400px;
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    color: #1a1d2e;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #1a1d2e;
+    font-weight: 600;
 }
 
 h4 {
-	font-family: Lato;
-	font-weight:700;
-	font-size: 16px;
-	color: #2D3353;
+    font-size: 1.25rem;
+    color: #1a1d2e;
+    font-weight: 600;
+}
+
+h5 {
+    font-size: 1.125rem;
+    color: #1a1d2e;
+    font-weight: 600;
+}
+
+h6 {
+    font-size: 1rem;
+    color: #1a1d2e;
+    font-weight: 600;
 }
 
 p {
-	font-family: Lato;
-	font-weight: 400;
-	font-size: 16px;
-	color: #2D3353;
-	line-height: 24px;}
-
-.features p{
-	font-family: Lato;
-	font-weight: 300;
-	font-size: 14px;
-	color: #808080;
-	line-height: 21px
+    margin: 0 0 1rem 0;
+    color: #2D3353;
+    line-height: 1.6;
 }
 
-.footer input[type=text], .footer input[type=email], textarea.message{
-    background-color: #242B42;
-    color: #C9D3F5 !important;
-    border: #394060 1px solid !important;
+/* Form Styles - Improved Accessibility */
+.footer input[type=text], 
+.footer input[type=email], 
+.footer input[type=tel], 
+.footer textarea {
+    background-color: #2a3142;
+    color: #ffffff !important;
+    border: 2px solid #4a5568 !important;
     outline: none;
+    font-size: 16px;
+    padding: 12px 16px;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
 }
 
-.footer input[type=text]:focus, .footer input[type=email]:focus, textarea:focus.message{
-	background-color: #242B42;
-    color: #C9D3F5 !important;
-    border: #516EFB 2px solid !important;
-    resize: none;
+.footer input[type=text]:focus, 
+.footer input[type=email]:focus, 
+.footer input[type=tel]:focus, 
+.footer textarea:focus {
+    background-color: #2a3142;
+    color: #ffffff !important;
+    border: 2px solid #4299e1 !important;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
     outline: none;
 }
 
 .footer label {
-  	cursor: default;
-  	font-family: Lato-regular;
-	font-size: 16px;
-	color: #8491AD;
+    cursor: default;
+    font-size: 16px;
+    color: #cbd5e0;
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: block;
 }
 
+/* Button Styles - Accessible Colors */
 .btn-enquiry {
-	background-color: #B9A646;
-	font-family: Lato-bold;
-	font-style: 10px;
-	padding: 10px 24px;
-	border: 0px;
-	color: #1E233E;
-	text-transform: uppercase;
+    background-color: #d69e2e;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 24px;
+    border: none;
+    color: #1a202c;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
+.btn-enquiry:hover,
+.btn-enquiry:focus {
+    background-color: #b7791f;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+/* Hero Section */
 .Leading {
-	background-color: #334DCC;
-	min-height: 680px;
+    background-color: #334DCC;
+    min-height: 680px;
 }
 
 .Leading p {
-	font-family: Lato;
-	font-weight: 400;
-	font-size: 14px;
-	color: #A8F0F0;
-	line-height: 21px;
-	max-width: 460px
+    font-size: 18px;
+    color: #e2e8f0;
+    line-height: 1.7;
+    max-width: 460px;
 }
 
-.btn-primary{
-	font-family: Lato;
-	font-weight: 700;
-	font-size: 14px;
-	color: #332C0B;
-	letter-spacing: 1.2px;
-	line-height: 24px;
-	text-transform: uppercase;
-	background: #D9BB26;
-	border-radius: 4px;
-	padding: 10px 30px;
-	border: none;
+/* Primary Button Styles - WCAG AA Compliant */
+.btn-primary {
+    font-weight: 600;
+    font-size: 16px;
+    color: #1a202c;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    background: #d69e2e;
+    border-radius: 6px;
+    padding: 12px 32px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.btn-primary:hover {
-	background: #FF446F;
+.btn-primary:hover,
+.btn-primary:focus {
+    background: #b7791f;
+    color: #1a202c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    text-decoration: none;
 }
 
-.btn-secondary{
-	font-family: Lato;
-	font-weight:700;
-	font-size: 14px;
-	color: #332C0B;
-	letter-spacing: 1.2px;
-	line-height: 24px;
-	text-transform: uppercase;
-	background: #D8D8D8;
-	border-radius: 4px;
-	padding: 10px 30px;
-	border: none;
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.footer{ 
-	background-color: #394060;
+/* Secondary Button Styles */
+.btn-secondary {
+    font-weight: 600;
+    font-size: 16px;
+    color: #1a202c;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    background: #e2e8f0;
+    border-radius: 6px;
+    padding: 12px 32px;
+    border: 2px solid #cbd5e0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+    background: #cbd5e0;
+    border-color: #a0aec0;
+    color: #1a202c;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+
+/* Layout Sections */
+.footer { 
+    background-color: #2d3748;
 }
 
 .copyright {
-	height: 36px;
-	background: #303550;
-    color: #858bad;
+    height: auto;
+    background: #1a202c;
+    color: #a0aec0;
     font-size: 14px;
-	font-weight: 400;
-	line-height: 19px;
-    padding-top: 10px;
-	padding-left: 100px;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 16px 20px;
+    text-align: center;
 }
 
 .aboutUs { 
-	background-image: url('images/BG-Strip.png');
-  	background-repeat: repeat-x;
+    background-image: url('images/BG-Strip.png');
+    background-repeat: repeat-x;
 }
 
 .dark-blue {
-background-color: #334DCC;
+    background-color: #334DCC;
 }
 
-.navbar-custom .navbar-nav .nav-link {
+.navbar {
+    min-height: 70px;
+    padding: 0.75rem 0;
 }
 
-.navbar-custom .nav-item:hover .nav-link {
+/* Text Color Utilities - Improved Contrast */
+.product-label {
+    color: #4a5568;
+    font-weight: 500;
 }
 
-.navbar-custom .nav-item:active .nav-link { 
+.testimonial {
+    background-color: #f7fafc;
 }
 
-.product-label{
-	color: #8491AD;
+.testimonial-card {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-.testimonial{
-	background-color: #F2F4FC;
+.grey-txt {
+    color: #4a5568;
 }
 
-.testimonial-card{
-	background-color:#ffffff;
-	padding: 30px 60px;
-}
-
-.grey-txt{
-	color:#7E808F;
-}
-
+/* Interactive Elements */
 .deep-shadow:hover {
-box-shadow: 0 0 20px 0 rgba(0,0,0,0.10);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+/* Navigation Styles - Enhanced with Animated Underline */
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    font-size: 16px;
+    padding: 8px 16px;
+    transition: color 0.3s ease;
+    position: relative;
+    text-decoration: none;
+}
+
+/* Animated underline effect */
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #ffd700;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: #ffd700 !important;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+/* Show underline on hover */
+.navbar-nav .nav-link:hover::after {
+    width: calc(100% - 32px);
+}
+
+/* Active state - keep underline visible */
+.navbar-nav .nav-link.active::after,
+.navbar-nav .nav-link[aria-current="page"]::after {
+    width: calc(100% - 32px);
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link[aria-current="page"] {
+    color: #ffd700 !important;
+    font-weight: 600;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+}
+
+/* Mobile navigation adjustments */
+@media (max-width: 991.98px) {
+    .navbar-nav .nav-link {
+        padding: 12px 20px;
+        border-left: 4px solid transparent;
+        border-radius: 0;
+    }
+    
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link:focus {
+        border-left-color: #ffd700;
+    }
+    
+    .navbar-nav .nav-link.active {
+        border-left-color: #ffd700;
+    }
+    
+    /* Hide underline on mobile, use left border instead */
+    .navbar-nav .nav-link::after {
+        display: none;
+    }
+    
+    .navbar-nav .nav-item {
+        margin: 0;
+    }
+}
+
+/* Form Validation - Enhanced Accessibility */
+.form-control.is-valid {
+    border-color: #38a169;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2338a169' d='m2.3 6.73.94-.94 2.94 2.94L8.12 6.8 7.2 5.86 5.13 7.93z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(.375em + .1875rem) center;
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+}
+
+.form-control.is-invalid {
+    border-color: #e53e3e;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23e53e3e' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23e53e3e' stroke='none'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(.375em + .1875rem) center;
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+}
+
+.spinner-border-sm {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Responsive Design - Enhanced */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Prevent iOS zoom on focus */
+    }
+    
+    h1 {
+        font-size: clamp(1.75rem, 6vw, 2.5rem);
+        line-height: 1.2;
+    }
+    
+    h2 {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+    }
+    
+    .Leading {
+        min-height: 500px;
+        padding: 2rem 0;
+    }
+    
+    .Leading p {
+        font-size: 16px;
+        max-width: 100%;
+    }
+    
+    .testimonial-card {
+        padding: 20px 24px;
+        margin: 1rem 0;
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        margin: 0.5rem 0;
+        padding: 14px 24px;
+        font-size: 16px;
+    }
+    
+    .footer input[type=text], 
+    .footer input[type=email], 
+    .footer input[type=tel], 
+    .footer textarea {
+        font-size: 16px; /* Prevent iOS zoom */
+    }
+    
+    .copyright {
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-nav .nav-item {
+        margin: 0.25rem 0;
+    }
+    
+    .testimonial-card {
+        padding: 16px 20px;
+    }
+}
+
+/* Focus states for better accessibility */
+*:focus {
+    outline: 2px solid #4299e1;
+    outline-offset: 2px;
+}
+
+/* Skip to content link for screen readers */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 9999;
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+
+/* Improve text selection */
+::selection {
+    background-color: #4299e1;
+    color: #ffffff;
+}
+
+/* Ensure sufficient color contrast for all text */
+.text-light {
+    color: #e2e8f0;
+}
+
+.text-muted {
+    color: #4a5568;
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25d366;
+    color: #ffffff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 28px;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+    background-color: #128c7e;
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.whatsapp-float:focus {
+    outline: 3px solid rgba(37, 211, 102, 0.5);
+    outline-offset: 2px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.whatsapp-icon {
+    line-height: 1;
+    margin: 0;
+}
+
+/* Pulse animation for attention */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.7), 0 0 0 10px rgba(37, 211, 102, 0.1);
+    }
+    100% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 24px;
+    }
+}
+
+/* Ensure it's above other elements */
+.whatsapp-float {
+    z-index: 9999;
 }
