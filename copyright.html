@@ -238,6 +238,12 @@
       // Initialize Bootstrap tooltips
       $('[data-toggle="tooltip"]').tooltip();
       
+      // Handle navigation to main page sections
+      $('.navbar-nav a[href^="index.html#"]').on('click', function(e) {
+        // Let the default navigation happen - this will go to the main page and scroll to the section
+        // The main page's scrollspy will handle the active states correctly
+      });
+      
       // Add loading state to forms
       $('form').on('submit', function() {
         const submitBtn = $(this).find('button[type="submit"]');

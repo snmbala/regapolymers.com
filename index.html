@@ -24,7 +24,7 @@
 
 </head>
 
-<body data-spy="scroll" data-target="#navbarResponsive" data-offset="80">
+<body data-spy="scroll" data-target="#navbarResponsive" data-offset="120">
 
 	<!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top dark-blue">
@@ -409,11 +409,20 @@
 <!-- Enhanced UX JavaScript -->
 <script>
   $(document).ready(function() {
-    // Initialize Bootstrap scrollspy
-    $('body').scrollspy({ target: '#navbarResponsive', offset: 80 });
+    // Initialize Bootstrap scrollspy with adjusted offset
+    $('body').scrollspy({ target: '#navbarResponsive', offset: 120 });
     
     // Initialize Bootstrap tooltips
     $('[data-toggle="tooltip"]').tooltip();
+    
+    // Enhanced scrollspy for better active state management
+    $('body').on('activate.bs.scrollspy', function(e, obj) {
+      // Ensure the correct nav item is highlighted
+      if (obj && obj.relatedTarget) {
+        $('.navbar-nav .nav-link').removeClass('active');
+        $('.navbar-nav .nav-link[href="' + obj.relatedTarget + '"]').addClass('active');
+      }
+    });
     
     // Add loading state to forms
     $('form').on('submit', function() {
@@ -439,6 +448,48 @@
     // Refresh scrollspy on window resize
     $(window).on('resize', function() {
       $('body').scrollspy('refresh');
+    });
+    
+    // Handle external navigation with hash (e.g., from copyright page)
+    $(window).on('load', function() {
+      if (window.location.hash) {
+        // Small delay to ensure scrollspy is properly initialized
+        setTimeout(function() {
+          // Scroll to the target section with proper offset
+          const target = $(window.location.hash);
+          if (target.length) {
+            $('html, body').animate({
+              scrollTop: target.offset().top - 100
+            }, 500, function() {
+              // After scrolling, refresh scrollspy and set active state
+              $('body').scrollspy('refresh');
+              
+              // Manually set the active state for the correct nav item
+              const hash = window.location.hash;
+              $('.navbar-nav .nav-link').removeClass('active');
+              $('.navbar-nav .nav-link[href="' + hash + '"]').addClass('active');
+            });
+          }
+        }, 200);
+      }
+    });
+    
+    // Also handle hash changes during navigation
+    $(window).on('hashchange', function() {
+      const target = $(window.location.hash);
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top - 100
+        }, 500, function() {
+          // After scrolling, refresh scrollspy and set active state
+          $('body').scrollspy('refresh');
+          
+          // Manually set the active state for the correct nav item
+          const hash = window.location.hash;
+          $('.navbar-nav .nav-link').removeClass('active');
+          $('.navbar-nav .nav-link[href="' + hash + '"]').addClass('active');
+        });
+      }
     });
   });
 
