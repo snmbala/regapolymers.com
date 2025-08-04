@@ -11,12 +11,12 @@ body {
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 80px; /* Optimized offset for fixed navbar */
+    scroll-padding-top: 40px; /* Optimized offset for fixed navbar */
 }
 
 /* Clean scroll offset method - no visual spacing impact */
 #Home, #Products, #AboutUs, #Testimonial, #ContactUs {
-    scroll-margin-top: 80px; /* Modern approach for scroll offset */
+    scroll-margin-top: 40px; /* Modern approach for scroll offset */
 }
 
 /* Typography Hierarchy - Accessible and Consistent */
