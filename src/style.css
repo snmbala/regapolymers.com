@@ -80,7 +80,7 @@ p {
 
 .Leading p {
     font-size: 18px;
-    color: #e2e8f0;
+    color: #ffffff;
     line-height: 1.7;
     max-width: 480px;
 }
@@ -111,7 +111,7 @@ p {
 
 .hero-stat-label {
     font-size: 0.72rem;
-    color: rgba(255, 255, 255, 0.65);
+    color: rgba(255, 255, 255, 0.87);
     text-transform: uppercase;
     letter-spacing: 0.06em;
     margin-top: 2px;
@@ -234,7 +234,7 @@ p {
 
 .btn-primary:hover,
 .btn-primary:focus {
-    background: #b7791f;
+    background: #c4872a;
     color: #1a202c;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(214, 158, 46, 0.4);
@@ -291,7 +291,7 @@ p {
 
 .btn-enquiry:hover,
 .btn-enquiry:focus {
-    background-color: #b7791f;
+    background-color: #c4872a;
     transform: translateY(-1px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     outline: 2px solid transparent;
@@ -562,7 +562,7 @@ p {
 }
 
 .testimonial-stars {
-    color: #d69e2e;
+    color: #9a6c00;
     font-size: 1rem;
     margin-bottom: 12px;
     letter-spacing: 2px;
