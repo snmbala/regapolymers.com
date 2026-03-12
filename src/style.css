@@ -302,6 +302,11 @@ p {
    PRODUCTS SECTION
    ============================================= */
 
+/* Consistent vertical gap between card rows at all viewports */
+#Products .row.justify-content-center {
+    row-gap: 1.5rem;
+}
+
 /* Card base — visible shadow at rest */
 .deep-shadow {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
@@ -395,7 +400,6 @@ p {
     }
 
     #Products .deep-shadow {
-        margin: 8px 0;
         padding: 12px;
     }
 
