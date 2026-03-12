@@ -34,13 +34,11 @@
 	<!-- Preconnect hints -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="preconnect" href="https://stackpath.bootstrapcdn.com">
-	<link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<!-- Font Awesome (kept on CDN) -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- Google Fonts (kept on CDN) -->
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i,900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body data-spy="scroll" data-target="#navbarResponsive" data-offset="120">
@@ -474,110 +472,8 @@
 	</div>
 
 
-	<!-- Scripts -->
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-	<script>
-		$(document).ready(function () {
-
-			// Scrollspy
-			$('body').scrollspy({ target: '#navbarResponsive', offset: 120 });
-			$('[data-toggle="tooltip"]').tooltip();
-
-			// Enhanced active state management
-			$('body').on('activate.bs.scrollspy', function (e, obj) {
-				if (obj && obj.relatedTarget) {
-					$('.navbar-nav .nav-link').removeClass('active');
-					$('.navbar-nav .nav-link[href="' + obj.relatedTarget + '"]').addClass('active');
-				}
-			});
-
-			// Pass product name into modal when opened from a product card
-			$(document).on('click', '[data-toggle="modal"][data-product]', function () {
-				var product = $(this).data('product');
-				if (product) {
-					$('#modal-product-name').text(product);
-					$('#modal-product-input').val(product);
-					$('#modal-product-context').show();
-					$('#enquiryModalLabel').text('Get a Free Quote — ' + product);
-				}
-			});
-
-			// Reset modal context when opened from generic "Get Free Quote" button
-			$(document).on('click', '[data-toggle="modal"]:not([data-product])', function () {
-				$('#modal-product-context').hide();
-				$('#modal-product-input').val('');
-				$('#enquiryModalLabel').text('Get a Free Quote');
-			});
-
-			// Reset modal state on close
-			$('#enquiryModal').on('hidden.bs.modal', function () {
-				$('#modal-product-context').hide();
-				$('#modal-product-input').val('');
-				$('#enquiryModalLabel').text('Get a Free Quote');
-				$('#modal-form-success, #modal-form-error').addClass('d-none');
-				$(this).find('form')[0].reset();
-				$(this).find('.is-valid, .is-invalid').removeClass('is-valid is-invalid');
-			});
-
-			// Form loading state on submit
-			$('form').on('submit', function () {
-				var $btn = $(this).find('button[type="submit"]');
-				var originalText = $btn.text();
-				$btn.prop('disabled', true).html('<span class="spinner-border spinner-border-sm" role="status"></span> Sending...');
-				setTimeout(function () {
-					$btn.prop('disabled', false).text(originalText);
-				}, 4000);
-			});
-
-			// Inline form validation feedback on blur
-			$('input, textarea').on('blur', function () {
-				if (this.checkValidity()) {
-					$(this).removeClass('is-invalid').addClass('is-valid');
-				} else {
-					$(this).removeClass('is-valid').addClass('is-invalid');
-				}
-			});
-
-			// Scrollspy refresh on resize
-			$(window).on('resize', function () {
-				$('body').scrollspy('refresh');
-			});
-
-			// Handle hash on page load (e.g., from copyright page)
-			$(window).on('load', function () {
-				if (window.location.hash) {
-					setTimeout(function () {
-						var target = $(window.location.hash);
-						if (target.length) {
-							$('html, body').animate({ scrollTop: target.offset().top - 90 }, 500, function () {
-								$('body').scrollspy('refresh');
-								$('.navbar-nav .nav-link').removeClass('active');
-								$('.navbar-nav .nav-link[href="' + window.location.hash + '"]').addClass('active');
-							});
-						}
-					}, 200);
-				}
-			});
-
-			// Handle in-page hash changes
-			$(window).on('hashchange', function () {
-				var target = $(window.location.hash);
-				if (target.length) {
-					$('html, body').animate({ scrollTop: target.offset().top - 90 }, 500, function () {
-						$('body').scrollspy('refresh');
-						$('.navbar-nav .nav-link').removeClass('active');
-						$('.navbar-nav .nav-link[href="' + window.location.hash + '"]').addClass('active');
-					});
-				}
-			});
-		});
-
-		// Dynamic copyright year
-		document.getElementById('copyright-year').textContent = new Date().getFullYear();
-	</script>
+	<!-- App entry point (Bootstrap, jQuery, CSS, and page JS are all bundled via Vite) -->
+	<script type="module" src="/src/main.js"></script>
 
 
 	<!-- Structured Data — Local Business -->

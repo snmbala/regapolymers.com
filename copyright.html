@@ -14,16 +14,11 @@
 	<!-- Preconnect hints -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="preconnect" href="https://stackpath.bootstrapcdn.com">
-	<link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+	<!-- Font Awesome (kept on CDN) -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+	<!-- Google Fonts (kept on CDN) -->
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i,900&display=swap" rel="stylesheet">
-
-	<link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
 
@@ -237,48 +232,8 @@
     <i class="fa fa-whatsapp whatsapp-icon"></i>
   </a>
 
-  <!-- Scripts moved to bottom for better page load performance -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-  <!-- Enhanced UX JavaScript -->
-  <script>
-    $(document).ready(function() {
-      // Initialize Bootstrap tooltips
-      $('[data-toggle="tooltip"]').tooltip();
-      
-      // Handle navigation to main page sections
-      $('.navbar-nav a[href^="index.html#"]').on('click', function(e) {
-        // Let the default navigation happen - this will go to the main page and scroll to the section
-        // The main page's scrollspy will handle the active states correctly
-      });
-      
-      // Add loading state to forms
-      $('form').on('submit', function() {
-        const submitBtn = $(this).find('button[type="submit"]');
-        const originalText = submitBtn.text();
-        submitBtn.prop('disabled', true).html('<span class="spinner-border spinner-border-sm" role="status"></span> Sending...');
-        
-        // Re-enable after 3 seconds (adjust based on actual form handling)
-        setTimeout(() => {
-          submitBtn.prop('disabled', false).text(originalText);
-        }, 3000);
-      });
-      
-      // Add form validation feedback
-      $('input, textarea').on('blur', function() {
-        if (this.checkValidity()) {
-          $(this).removeClass('is-invalid').addClass('is-valid');
-        } else {
-          $(this).removeClass('is-valid').addClass('is-invalid');
-        }
-      });
-    });
-
-    // Dynamic copyright year
-    document.getElementById('copyright-year').textContent = new Date().getFullYear();
-  </script>
+  <!-- App entry point -->
+  <script type="module" src="/src/copyright.js"></script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45716309-10"></script>

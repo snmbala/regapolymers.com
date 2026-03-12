@@ -464,7 +464,7 @@ p {
    ABOUT US SECTION
    ============================================= */
 .aboutUs {
-    background-image: url('images/BG-Strip.png');
+    background-image: url('/images/BG-Strip.png');
     background-repeat: repeat-x;
 }
 
