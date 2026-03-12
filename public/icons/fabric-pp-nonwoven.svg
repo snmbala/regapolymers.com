@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+  <rect width="80" height="80" rx="8" fill="#EEF0FA"/>
+  <!-- Soft random fiber pattern (non-woven) -->
+  <g stroke="#5B6ABF" stroke-width="1.2" opacity="0.35" stroke-linecap="round">
+    <path d="M18 22 Q28 18, 38 24"/>
+    <path d="M42 20 Q52 16, 62 22"/>
+    <path d="M14 32 Q24 28, 34 34"/>
+    <path d="M36 30 Q48 26, 58 32"/>
+    <path d="M20 42 Q30 38, 42 44"/>
+    <path d="M44 40 Q54 36, 64 42"/>
+    <path d="M16 52 Q26 48, 38 54"/>
+    <path d="M40 50 Q52 46, 62 52"/>
+    <path d="M18 62 Q30 58, 40 64"/>
+    <path d="M44 60 Q54 56, 64 62"/>
+  </g>
+  <g stroke="#5B6ABF" stroke-width="1.2" opacity="0.2" stroke-linecap="round">
+    <path d="M22 18 Q20 28, 24 38"/>
+    <path d="M32 16 Q30 28, 34 40"/>
+    <path d="M42 18 Q40 30, 44 42"/>
+    <path d="M52 16 Q50 28, 54 40"/>
+    <path d="M26 40 Q24 50, 28 60"/>
+    <path d="M36 38 Q34 50, 38 62"/>
+    <path d="M46 40 Q44 52, 48 64"/>
+    <path d="M56 38 Q54 50, 58 62"/>
+  </g>
+</svg>

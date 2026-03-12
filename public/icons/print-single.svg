@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="6" fill="#EEF0FA"/>
+  <!-- Bag outline -->
+  <rect x="14" y="14" width="36" height="40" rx="3" fill="#fff" stroke="#C0C8E4" stroke-width="1.5"/>
+  <!-- Single colour band -->
+  <rect x="14" y="26" width="36" height="14" fill="#334DCC" opacity="0.25"/>
+  <!-- Text line -->
+  <rect x="20" y="30" width="24" height="3" rx="1" fill="#334DCC" opacity="0.5"/>
+  <rect x="24" y="35" width="16" height="2" rx="1" fill="#334DCC" opacity="0.3"/>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+  <rect width="80" height="80" rx="8" fill="#F5F0E6"/>
+  <!-- Rough jute fiber pattern -->
+  <g stroke="#8B7355" stroke-width="2.8" opacity="0.4" stroke-linecap="round">
+    <line x1="16" y1="20" x2="64" y2="20"/>
+    <line x1="16" y1="32" x2="64" y2="32"/>
+    <line x1="16" y1="44" x2="64" y2="44"/>
+    <line x1="16" y1="56" x2="64" y2="56"/>
+  </g>
+  <g stroke="#8B7355" stroke-width="2.8" opacity="0.3" stroke-linecap="round">
+    <line x1="22" y1="16" x2="22" y2="64"/>
+    <line x1="34" y1="16" x2="34" y2="64"/>
+    <line x1="46" y1="16" x2="46" y2="64"/>
+    <line x1="58" y1="16" x2="58" y2="64"/>
+  </g>
+  <!-- Textured fiber strands -->
+  <g stroke="#6B5335" stroke-width="0.8" opacity="0.3" stroke-linecap="round">
+    <path d="M18 21 Q22 19, 26 22"/>
+    <path d="M30 31 Q34 29, 38 33"/>
+    <path d="M42 43 Q46 41, 50 45"/>
+    <path d="M54 55 Q58 53, 62 57"/>
+    <path d="M23 26 Q21 30, 23 34"/>
+    <path d="M35 38 Q33 42, 35 46"/>
+    <path d="M47 50 Q45 54, 47 58"/>
+  </g>
+</svg>

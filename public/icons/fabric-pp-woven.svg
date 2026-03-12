@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+  <rect width="80" height="80" rx="8" fill="#EEF0FA"/>
+  <!-- Woven cross-hatch pattern -->
+  <g stroke="#334DCC" stroke-width="2.5" opacity="0.5">
+    <line x1="16" y1="20" x2="64" y2="20"/>
+    <line x1="16" y1="30" x2="64" y2="30"/>
+    <line x1="16" y1="40" x2="64" y2="40"/>
+    <line x1="16" y1="50" x2="64" y2="50"/>
+    <line x1="16" y1="60" x2="64" y2="60"/>
+  </g>
+  <g stroke="#334DCC" stroke-width="2.5" opacity="0.35">
+    <line x1="20" y1="16" x2="20" y2="64"/>
+    <line x1="30" y1="16" x2="30" y2="64"/>
+    <line x1="40" y1="16" x2="40" y2="64"/>
+    <line x1="50" y1="16" x2="50" y2="64"/>
+    <line x1="60" y1="16" x2="60" y2="64"/>
+  </g>
+  <!-- Highlight weave intersections -->
+  <g fill="#334DCC" opacity="0.18">
+    <rect x="18" y="18" width="5" height="5" rx="1"/>
+    <rect x="38" y="18" width="5" height="5" rx="1"/>
+    <rect x="58" y="18" width="5" height="5" rx="1"/>
+    <rect x="28" y="28" width="5" height="5" rx="1"/>
+    <rect x="48" y="28" width="5" height="5" rx="1"/>
+    <rect x="18" y="38" width="5" height="5" rx="1"/>
+    <rect x="38" y="38" width="5" height="5" rx="1"/>
+    <rect x="58" y="38" width="5" height="5" rx="1"/>
+    <rect x="28" y="48" width="5" height="5" rx="1"/>
+    <rect x="48" y="48" width="5" height="5" rx="1"/>
+    <rect x="18" y="58" width="5" height="5" rx="1"/>
+    <rect x="38" y="58" width="5" height="5" rx="1"/>
+    <rect x="58" y="58" width="5" height="5" rx="1"/>
+  </g>
+</svg>
