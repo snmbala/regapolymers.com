@@ -37,13 +37,33 @@ $(document).ready(function () {
     $('#enquiryModalLabel').text('Get a Free Quote')
   })
 
-  // Reset modal state on close
+  // Persist name/phone/email across modal reopens for the browser session
+  var MODAL_PERSIST = [
+    { id: '#modal-name',  key: 'rp_name'  },
+    { id: '#modal-phone', key: 'rp_phone' },
+    { id: '#modal-email', key: 'rp_email' }
+  ]
+
+  MODAL_PERSIST.forEach(function (f) {
+    $(document).on('input', f.id, function () {
+      sessionStorage.setItem(f.key, this.value)
+    })
+  })
+
+  $('#enquiryModal').on('show.bs.modal', function () {
+    MODAL_PERSIST.forEach(function (f) {
+      var saved = sessionStorage.getItem(f.key)
+      if (saved) $(f.id).val(saved)
+    })
+  })
+
+  // Reset modal state on close — preserve contact fields, clear message only
   $('#enquiryModal').on('hidden.bs.modal', function () {
     $('#modal-product-context').hide()
     $('#modal-product-input').val('')
     $('#enquiryModalLabel').text('Get a Free Quote')
     $('#modal-form-success, #modal-form-error').addClass('d-none')
-    $(this).find('form')[0].reset()
+    $('#modal-message').val('')
     $(this).find('.is-valid, .is-invalid').removeClass('is-valid is-invalid')
   })
 
