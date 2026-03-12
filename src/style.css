@@ -127,7 +127,6 @@ p {
 .navbar {
     min-height: 70px;
     padding: 0.75rem 0;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
 }
 
 @media (max-width: 991.98px) {
@@ -209,6 +208,32 @@ p {
     .navbar-nav .nav-item {
         margin: 0;
     }
+}
+
+/* Navbar Contact Links (phone & email) */
+.nav-contact-group {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.navbar-nav .nav-link.nav-contact {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 400;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.navbar-nav .nav-link.nav-contact::after {
+    display: none;
+}
+
+.navbar-nav .nav-link.nav-contact:hover,
+.navbar-nav .nav-link.nav-contact:focus {
+    color: rgba(255, 255, 255, 0.7) !important;
+    background-color: transparent;
 }
 
 /* =============================================
@@ -1194,17 +1219,18 @@ p {
 
 .skip-link {
     position: absolute;
-    top: -40px;
-    left: 6px;
-    background: #000;
+    top: -100%;
+    left: 0;
+    background: #334DCC;
     color: #fff;
-    padding: 8px;
+    padding: 8px 16px;
     text-decoration: none;
     z-index: 9999;
+    border-radius: 0 0 4px 0;
 }
 
 .skip-link:focus {
-    top: 6px;
+    top: 0;
 }
 
 ::selection {
